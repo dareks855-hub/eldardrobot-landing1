@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: system-ui, -apple-system, sans-serif;
+  --font-oswald: 'Oswald', sans-serif;
+
+  --color-dark-bg: #0a0a0a;
+  --color-dark-card: #111111;
+  --color-dark-text: #ffffff;
+  --color-dark-muted: #a3a3a3;
+
+  --color-accent-red: #FF3D00;
+  --color-accent-orange: #FF6B35;
+  --color-accent-lime: #AAFF00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  font-family: var(--font-inter);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Скрытие скролбара в Firefox и других браузерах */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FF3D00, #FF6B35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #FF6B35, #AAFF00);
+}
+
+/* Плавные анимации для кнопок */
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glassmorphism эффект */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-accent-red);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--color-accent-red);
+  color: white;
+}
+
+/* Фокус для доступности */
+:focus-visible {
+  outline: 2px solid var(--color-accent-lime);
+  outline-offset: 2px;
+}
+
+/* Отключение стандартного фокуса для мыши */
+:focus:not(:focus-visible) {
+  outline: none;
+}
