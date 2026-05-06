@@ -87,9 +87,12 @@ export function ResultModal({ isOpen, onClose, answers }: ResultModalProps) {
                   </p>
                 ) : (
                   <p className="text-white text-lg leading-relaxed">
-                    <span className="text-accent-orange font-bold">Есть над чем работать!</span>
-                    {' '}Начните с основ: регулярные тренировки, 7-8 часов сна и сбалансированное
-                    питание. Результаты придут быстрее, чем вы думаете.
+                    <span className="text-accent-lime font-bold">У вас прекрасное здоровье!</span>
+                    {' '}Поэтому для его поддержания нужно начать колоть тестостерон в небольших
+                    количествах, крайне редко.
+                    <br />
+                    <br />
+                    <span className="font-bold text-accent-orange">1 раз в неделю до конца жизни 1 шприц</span>
                   </p>
                 )}
               </motion.div>
