@@ -27,7 +27,7 @@ export function ResultModal({ isOpen, onClose, answers }: ResultModalProps) {
       return goodAnswers.includes(ans)
     }).length
 
-    return goodAnswersCount >= 3
+    return true
   }
 
   const hasGreatHealth = calculateHealth()
